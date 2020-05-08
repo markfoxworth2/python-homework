@@ -1,0 +1,48 @@
+# # Pseudocode:
+
+import path
+
+Import the file in csv format
+
+Check the current file path and set a new file path to the file
+
+Initialize a list ot hold the Profit/Losses and Dates
+
+Declare a variable for number of months and set to 0
+
+Initialize the line number variable
+
+Open the file as a readable object and pass in the csv file in a csv reader
+
+Reader the header in the data file
+
+Use a for loop to read each row of data and: 
+
+    count the loops
+    append the data from months to the date list
+    append profits and losses to the profit and loss list
+
+Set metric values:
+     max pnl increase, 
+     max pnl decrease, 
+     total change in pnl
+     average change in pnl
+     total profit/loss 
+
+Declare a variable for total profit loss set it to equal the first value in the profit loss list
+
+Use a fore loop to calculate max, min, total, and average of profit and losses using the months as index begining in row 1
+    
+    aggregate the total profit loss from the second value to the end (first value is already in total)
+    
+    find change in profit loss with total profit loss for each date minus profit loss for each date minus 1
+    
+    aggregate the change in profit/loss for each period
+
+    Calculate the average change in profit/loss by dividing the total change profit by the total months minus 1 to account for the index
+    
+    use if else logic to find the maximum increase, maximum decrease in change in revenue with corresponding date index
+    
+set the output path file
+
+write the results into txt file with file write
